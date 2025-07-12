@@ -12,7 +12,7 @@ import {
   Frame,
 } from "@shopify/polaris";
 import { TitleBar, useAppBridge } from "@shopify/app-bridge-react";
-import { authenticate } from "../shopify.server";
+import { authenticate } from "../config/auth/shopify.server";
 import { CheckIcon } from "@shopify/polaris-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -25,8 +25,8 @@ import {
   PlayIcon,
   EyeSlashIcon
 } from "@heroicons/react/24/outline";
-import ghostlyStyles from "../styles/ghostly.css?url";
-import { createInventoryService, GhostlyStats } from "../services/inventory.server";
+import ghostlyStyles from "../frontend/styles/ghostly.css?url";
+import { createInventoryService, GhostlyStats } from "../backend/services/inventory.server";
 
 export const links = () => [
   { rel: "stylesheet", href: ghostlyStyles },
@@ -42,7 +42,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
     const stats: GhostlyStats = {
       totalProducts: allProducts.length,
       outOfStockProducts: outOfStockProducts.length,
-      hiddenProducts: allProducts.filter(p => p.status === "DRAFT").length,
+      hiddenProducts: allProducts.filter((p: any) => p.status === "DRAFT").length,
       lastRunTime: null,
     };
 

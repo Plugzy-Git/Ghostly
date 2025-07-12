@@ -1,5 +1,5 @@
 import { ActionFunctionArgs, json } from "@remix-run/node";
-import { createInventoryService, Product } from "../services/inventory.server";
+import { createInventoryService, Product } from "../backend/services/inventory.server";
 
 export async function action({ request }: ActionFunctionArgs) {
   const method = request.method;
