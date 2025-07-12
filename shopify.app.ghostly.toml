@@ -3,7 +3,7 @@
 client_id = "babaa9dc8b6cc0bcfad19b1e0f0be081"
 name = "Ghostly by Plugzy"
 handle = "ghostly-by-plugzy-2025"
-application_url = "https://adaptation-rec-incidents-coming.trycloudflare.com"
+application_url = "https://anonymous-cable-democrats-other.trycloudflare.com"
 embedded = true
 
 [build]
@@ -18,7 +18,7 @@ api_version = "2025-07"
 scopes = "read_products,write_products"
 
 [auth]
-redirect_urls = ["https://adaptation-rec-incidents-coming.trycloudflare.com/auth/callback", "https://adaptation-rec-incidents-coming.trycloudflare.com/auth/shopify/callback", "https://adaptation-rec-incidents-coming.trycloudflare.com/api/auth/callback"]
+redirect_urls = ["https://anonymous-cable-democrats-other.trycloudflare.com/auth/callback", "https://anonymous-cable-democrats-other.trycloudflare.com/auth/shopify/callback", "https://anonymous-cable-democrats-other.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false
